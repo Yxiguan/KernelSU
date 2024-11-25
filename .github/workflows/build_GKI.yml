@@ -7,13 +7,13 @@ jobs:
     strategy:
       matrix:
         include:
-          - version: "5.10"
-            sub_level: 168
-            os_patch_level: 2023-05
+          - version: "6.6"
+            sub_level: 30
+            os_patch_level: 2024-08
     uses: ./.github/workflows/gki-kernel.yml
     with:
-      version: android12-${{ matrix.version }}
-      version_name: android12-${{ matrix.version }}.${{ matrix.sub_level }}
-      tag: android12-${{ matrix.version }}-${{ matrix.os_patch_level }}
+      version: android15-${{ matrix.version }}
+      version_name: android15-${{ matrix.version }}.${{ matrix.sub_level }}
+      tag: android15-${{ matrix.version }}-${{ matrix.os_patch_level }}
       patch_path: ${{ matrix.version }}
       debug: false
