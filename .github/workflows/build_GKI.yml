@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-debug-kernel-a12:
+  build-debug-kernel-a15:
     strategy:
       matrix:
         include:
